@@ -10,18 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var flag = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         view.backgroundColor = UIColor.yellow
-    
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func buttonPrdssed(_ sender: Any) {
+        if flag == 0 {
+            view.backgroundColor = UIColor.green
+            flag = 1 }
+        else if flag == 1 {
+            view.backgroundColor = UIColor.blue
+            flag = 0 }
+        }
     }
-
-
-}
 
